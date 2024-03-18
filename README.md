@@ -1,53 +1,36 @@
 # Generally processing photometric images of galaxies by planting human-in-the-loop upon a large vision model
 
-## [Chi-Mao Fan](https://github.com/FanChiMao), Tsung-Jung Liu, Kuan-Hsien Liu  
-<!--[![supplement](https://img.shields.io/badge/Supplementary-Material-B85252)](https://drive.google.com/file/d/1mbfljawUuFUQN9V5g0Rmw1UdauJdckCu/view?usp=sharing)-->
-[![paper](https://img.shields.io/badge/arXiv-Paper-brightgreen)](https://arxiv.org/abs/2202.14009)
-[![official_paper](https://img.shields.io/badge/IEEE-Paper-blue)](https://ieeexplore.ieee.org/document/9937486)
-[![video](https://img.shields.io/badge/Video-Presentation-F9D371)](https://youtu.be/XQsFxGaDTGk)
-[![slides](https://img.shields.io/badge/Presentation-Slides-B762C1)](https://docs.google.com/presentation/d/1IEQ7OMPTLgxwpjmRmXZmleAHInwsCdhY/edit?usp=sharing&ouid=108348190349543369603&rtpof=true&sd=true)
-[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/52Hz/SUNet_AWGN_denoising)  
-
+## Mingxiang Fu, Yu Song, Jiameng Lv 
 ***
-> Abstract : Image restoration is a challenging ill-posed problem
-which also has been a long-standing issue. In the past few
-years, the convolution neural networks (CNNs) almost dominated
-the computer vision and had achieved considerable success
-in different levels of vision tasks including image restoration.
-However, recently the Swin Transformer-based model also shows
-impressive performance, even surpasses the CNN-based methods
-to become the state-of-the-art on high-level vision tasks. In this
-paper, we proposed a restoration model called SUNet which uses
-the Swin Transformer layer as our basic block and then is applied
-to UNet architecture for image denoising.
+> Abstract : The exponential growth of astronomical datasets provides an unprecedented
+opportunity for humans to gain insight into the Universe. However, effec-
+tively analyzing this vast amount of data poses a significant challenge. As-
+tronomers are turning to deep learning techniques to address this, but the
+methods are limited by their specific training sets. Hence, to avoid dupli-
+cate workloads, we built a framework for general analysis of astronomical
+vision tasks based on a large vision model for downstream tasks, including
+morphological classification, image restoration, object detection, parameter
+extraction, and more. Considering the low signal-to-noise ratio in astro-
+nomical datasets and the imbalanced distribution of different astronomical
+objects, we have incorporated a Human-in-the-loop module into our large vi-
+sion model, which leverages human knowledge to enhance the reliability and
+interpretability of processing astronomical data interactively. The proposed
+framework exhibits notable few-shot learning capabilities and versatile adapt-
+ability to all the abovementioned tasks in data from large-scale sky surveys,
+such as the DESI legacy imaging surveys. Furthermore, multimodal data
+can be integrated similarly, which opens up possibilities for conducting joint
+analyses with datasets spanning diverse domains in this era of multi-message
+astronomy
 
 
-## Network Architecture  
-
-<table>
-  <tr>
-    <td colspan="2"><img src = "https://i.imgur.com/1UX5j3x.png" alt="CMFNet" width="800"> </td>  
-  </tr>
-  <tr>
-    <td colspan="2"><p align="center"><b>Overall Framework of SUNet</b></p></td>
-  </tr>
-  
-  <tr>
-    <td> <img src = "https://imgur.com/lV1CR4H.png" width="400"> </td>
-    <td> <img src = "https://imgur.com/dOjxV93.png" width="400"> </td>
-  </tr>
-  <tr>
-    <td><p align="center"><b>Swin Transformer Layer</b></p></td>
-    <td><p align="center"> <b>Dual up-sample</b></p></td>
-  </tr>
-</table>
 
 ## Quick Run  
-You can directly run personal noised images on my space of [**HuggingFce**](https://huggingface.co/spaces/52Hz/SUNet_AWGN_denoising).  
+You can download the relevant code files directly from [github](https://github.com/Songyu1026/LVM).  
 
-To test the [pre-trained models](https://drive.google.com/file/d/1ViJgcFlKm1ScEoQH616nV4uqFhkg8J8D/view?usp=sharing) of denoising on your own 256x256 images, run
-```
-python demo.py --input_dir images_folder_path --result_dir save_images_here --weights path_to_models
+You can also download the pre-trained weight size is about 400 MB, you can download it on the [website](https://pan.baidu.com/s/1Q8G8gMTzJc7Q2NfRULr60Q?pwd=LVMC ) 
+password: LVMC
+
+Using our pre-trained weights, we can extract the features of astronomical images, and finally get the features of 768 dimensions of the data. You can do anything with this data, or continue to fine-tune the network. The following is how to use:
 ```
 Here is an example command:
 ```
