@@ -1,5 +1,5 @@
 # Training configuration
-GPU: [2, 3,4,5,6]
+GPU: [0, 1]
 
 VERBOSE: False
 
@@ -26,10 +26,8 @@ SWINUNET:
 OPTIM:
   BATCH: 128
   EPOCHS: 50000
-  # EPOCH_DECAY: [10]
   LR_INITIAL: 2e-3
   LR_MIN: 1e-6
-  # BETA1: 0.9
 
 TRAINING:
   VAL_AFTER_EVERY: 10
@@ -37,11 +35,10 @@ TRAINING:
   TRAIN_PS: 128
   VAL_PS: 128
   TRAIN_DIR: "/nfsdata/share/ssl_legacy/ssl_legacyA/file/south-train/"
- # VAL_DIR: "/share/songyu/Abnormal_galaxy/4daaaaaaa.csv"              #/nfsdata/share/ssl_legacy/ssl_legacyA/file/south-train/   /share/songyu/Abnormal_galaxy/DATA
   VAL_DIR: "/share2/fumingxiang/BGS_cut_v1/raw/"            # path to validation data
 
 TESTING:
   VAL_AFTER_EVERY: 10
   VAL_PS: 128
-  DATA_TYPE: "H5"    #FITS
+  DATA_TYPE: "FITS"
   VAL_DIR: "./data/FITS"
