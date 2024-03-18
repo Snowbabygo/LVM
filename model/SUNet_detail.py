@@ -754,17 +754,9 @@ class SUNet(nn.Module):
     def forward(self, x):
         x = self.conv_first(x)
         F, residual, x_downsample = self.forward_features(x)
-        # print(np.shape(F))    #torch.Size([1, 64, 768])   (4, 4, 768)
         re = self.forward_up_features(F, x_downsample)
-        out = F.view(F.size(0), -1)
-        out = self.output_class(out)
-
-        out = torch.softmax(out, dim=1)
-        # out = torch.argmax(out, dim=1).unsqueeze(1).float()
         re = self.up_x4(re)
         re = self.low_conv(re)
-        # re = re + residual
-        # re = self.low_conv(re)
         return re, F
 
     def flops(self):
