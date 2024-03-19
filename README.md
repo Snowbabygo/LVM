@@ -23,7 +23,7 @@ analyses with datasets spanning diverse domains in this era of multi-message
 astronomy
 
 ## Network Architecture  
-![image](![image](https://github.com/MaiEmily/map/blob/master/public/image/20190528145810708.png))
+![image]([https://github.com/MaiEmily/map/blob/master/public/image/20190528145810708.png](https://github.com/Songyu1026/LVM/blob/main/Structure%20of%20the%20LVM.png)
 ## Instructions  
 You can download the relevant code files directly from [**github**](https://github.com/Songyu1026/LVM).  
 
