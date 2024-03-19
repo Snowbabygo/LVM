@@ -22,8 +22,8 @@ can be integrated similarly, which opens up possibilities for conducting joint
 analyses with datasets spanning diverse domains in this era of multi-message
 astronomy
 
-
-
+## Network Architecture  
+![image](![image](https://github.com/MaiEmily/map/blob/master/public/image/20190528145810708.png))
 ## Instructions  
 You can download the relevant code files directly from [**github**](https://github.com/Songyu1026/LVM).  
 
