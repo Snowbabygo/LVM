@@ -3,20 +3,20 @@
 ## Mingxiang Fu, Yu Song, Jiameng Lv 
 ***
 > Abstract : The exponential growth of astronomical datasets provides an unprecedented
-opportunity for humans to gain insight into the Universe. However, effec-
-tively analyzing this vast amount of data poses a significant challenge. As-
-tronomers are turning to deep learning techniques to address this, but the
-methods are limited by their specific training sets. Hence, to avoid dupli-
-cate workloads, we built a framework for general analysis of astronomical
+opportunity for humans to gain insight into the Universe. However, effectively 
+analyzing this vast amount of data poses a significant challenge. As
+tronomers are turning to deep learning techniques to address this, 
+>but the methods are limited by their specific training sets. Hence, 
+to avoid duplicate workloads, we built a framework for general analysis of astronomical
 vision tasks based on a large vision model for downstream tasks, including
 morphological classification, image restoration, object detection, parameter
-extraction, and more. Considering the low signal-to-noise ratio in astro-
-nomical datasets and the imbalanced distribution of different astronomical
-objects, we have incorporated a Human-in-the-loop module into our large vi-
-sion model, which leverages human knowledge to enhance the reliability and
+extraction, and more. Considering the low signal-to-noise ratio in astronomical
+datasets and the imbalanced distribution of different astronomical
+objects, we have incorporated a Human-in-the-loop module into our large vision
+ model, which leverages human knowledge to enhance the reliability and
 interpretability of processing astronomical data interactively. The proposed
-framework exhibits notable few-shot learning capabilities and versatile adapt-
-ability to all the abovementioned tasks in data from large-scale sky surveys,
+framework exhibits notable few-shot learning capabilities and versatile adaptability
+ to all the abovementioned tasks in data from large-scale sky surveys,
 such as the DESI legacy imaging surveys. Furthermore, multimodal data
 can be integrated similarly, which opens up possibilities for conducting joint
 analyses with datasets spanning diverse domains in this era of multi-message
